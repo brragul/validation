@@ -1,0 +1,12 @@
+<xml version="1.0" encoding="UTF-8">
+	<nanban>
+		<friend>
+			<name>Ravi</name>
+			<address>NYC</address>
+		</friend>
+		<friend>
+			<name>Ragul</name>
+			<address>New Jersey</address>
+		</friend>
+	</nanban>
+</xml>

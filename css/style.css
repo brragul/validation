@@ -1,0 +1,11 @@
+table,th,tr,td{
+	width:100%;
+	border-style:solid;
+	border-collapse:collapse;
+	margin:0px;
+	padding:5px;
+}
+
+button{
+	alight:center;
+}

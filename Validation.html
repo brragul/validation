@@ -1,0 +1,35 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/compare.js"></script>
+</head>
+  <body>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6">
+                  <strong>Copy from reporting requirement
+              </div>
+              <div class="col-md-6">
+                  Copy Paste from Charles below</strong>
+              </div>
+          </div>
+      <div class="row">
+          <div class="col-md-6">
+          <textarea rows="40" cols="60" id="txtArea1"></textarea>
+          </div>
+          <div class="col-md-6">
+          <textarea rows="40" cols="60" id="txtArea2"></textarea>
+          </div>
+      </div>
+	<br>
+    <button id="compare" value="Submit">Compare</button>
+    <label><input type="radio" name="variable" value="CDV" checked>Context Data Variable</label>
+    <label><input type="radio" name="variable" value="ep">eVar/prop</label>
+	<br><br>
+	<p id="myTable"></p>
+    </div>
+  </body>
+</html>

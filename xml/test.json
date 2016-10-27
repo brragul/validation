@@ -1,0 +1,29 @@
+{
+	"Clip_Start_Call" : {
+		"pageName" : "<app name> default adobe variable, should capture the value of the current page or screen. This has to be passed by page developers.)",
+		"v.vidTitle" : "The Nightly Show with Larry Wilmore 02103 Act 1 From MRSS",
+		"v.vidOwner" : "comedycentral.com From MRSS",
+		"v.mgid" : "<video mgid> e.g. mgid:arc:episode:comedycentral.com:4189e773-cb7d-4ccb-ad58-58a2e4169ba2 From MRSS",
+		"v.vidLength" : "captured in Seconds",
+		"v.vidContentType" : "Full Episode",
+		"v.vidFranchise" : "The Daily Show with Trevor Noah",
+		"v.vidArtist" : "The Daily Show with Trevor Noah",
+		"v.vidAppName" : "VMN-iOS-Player",
+		"v.vidEpTitle" : "The Daily Show with Trevor Noah|May 4, 2016|21|21103|Bethany Cosentino - Speaking Up About Sexism in the Music Industry",
+		"v.epLength" : "captured in Seconds",
+		"v.epMGID" : "mgid:arc:episode:comedycentral.com:4189e773-cb7d-4ccb-ad58-58a2e4169ba2",
+		"v.contentStatus" : "LOCKED OR UNLOCKED",
+		"v.activity" : "fepStart",
+		"v.seasonN" : "<season#> Available with Bento 3.2.0",
+		"v.episodeN" : "<episode #> Available with Bento 3.2.0",
+		"v.linearPubDate" : "<publish date> Available with Bento 3.2.0",
+		"v.epCount" : "4",
+		"a.media.friendlyName" : "The Daily Show with Trevor Noah|May 4, 2016|21|21103|Bethany Cosentino - Speaking Up About Sexism in the Music Industry",
+		"a.media.channel" : "comedycentral.com",
+		"a.media.name" : "<video mgid> e.g. mgid:arc:video:comedycentral.com:218a1343-c992-4431-997f-97535a417da8 From MRSS",
+		"a.media.length" : "<captured in Seconds>",
+		"a.media.view" : "true",
+		"a.media.playerName" : "VMN-iOS-Player",
+		"a.contentType" : "vod"
+	}
+}
