@@ -1,6 +1,6 @@
 $("document").ready(function(){
 	$("body").on('click','#getXML',function(){
-		$.getJSON("xml/test.json", function(json) {
+		$.getJSON("data/test.json", function(json) {
 			//var obj = json.
 			//console.log(json.Clip_Start_Call.pageName);
 			$.each(json,function(k,v){
