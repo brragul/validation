@@ -25,5 +25,32 @@
 		"a.media.view" : "true",
 		"a.media.playerName" : "VMN-iOS-Player",
 		"a.contentType" : "vod"
+	},
+	"Livestream_Start_Call" : {
+		"pageName" : "<app name> default adobe variable, should capture the value of the current page or screen. This has to be passed by page developers.)",
+		"v.vidTitle" : "NO-SEASON#|NO-EPISODE#|COMEDY CENTRAL - LIVE CHANNEL SIMULCAST ((DO NOT DELETE) This is a Charles v.vidtitle value",
+		"v.vidOwner" : "comedycentral.com From MRSS",
+		"v.mgid" : "<video mgid> e.g. mgid:arc:episode:comedycentral.com:4189e773-cb7d-4ccb-ad58-58a2e4169ba2 From MRSS",
+		"v.vidLength" : "captured in Seconds",
+		"v.vidContentType" : "Live Event",
+		"v.vidFranchise" : "no-association This is a Charles v.vidFranchise value",
+		"v.vidArtist" : "no-association This is a Charles v.vidFranchise value",
+		"v.vidAppName" : "VMN-iOS-Player",
+		"v.vidEpTitle" : "",
+		"v.epLength" : "captured in Seconds",
+		"v.epMGID" : "mgid:arc:episode:comedycentral.com:4189e773-cb7d-4ccb-ad58-58a2e4169ba2",
+		"v.contentStatus" : "LOCKED OR UNLOCKED",
+		"v.activity" : "livestreamStart",
+		"v.seasonN" : "<season#> Available with Bento 3.2.0",
+		"v.episodeN" : "<episode #> Available with Bento 3.2.0",
+		"v.linearPubDate" : "<publish date> Available with Bento 3.2.0",
+		"v.epCount" : "4",
+		"a.media.friendlyName" : "NO-SEASON#|NO-EPISODE#|COMEDY CENTRAL - LIVE CHANNEL SIMULCAST ((DO NOT DELETE)",
+		"a.media.channel" : "comedycentral.com",
+		"a.media.name" : "<video mgid> e.g. mgid:arc:video:comedycentral.com:218a1343-c992-4431-997f-97535a417da8 From MRSS",
+		"a.media.length" : "<captured in Seconds>",
+		"a.media.view" : "true",
+		"a.media.playerName" : "VMN-iOS-Player",
+		"a.contentType" : "live"
 	}
 }

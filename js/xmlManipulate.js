@@ -4,8 +4,7 @@ $("document").ready(function(){
 			//var obj = json.
 			//console.log(json.Clip_Start_Call.pageName);
 			$.each(json,function(k,v){
-				console.log('Key :'+k)
-				console.log('Value :'+v)
+				var html = "";
 			});
 		});
 		
