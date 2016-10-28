@@ -6,7 +6,7 @@ var equal = '',
 var json = {
 	r : undefined,
 	get g(){
-		return r;
+		return this.r;
 	},
 	set s(x){
 		this.r =x;
@@ -18,7 +18,7 @@ $('document').ready(function(){
     var radio =  $('input[name=variable]:checked').val();
 	var a = $('#txtArea1').val(),
 	b = $('#txtArea2').val(),
-    objA = (json.g == undefined)?(objA = splitAndReturnObjectCDV(json.g)):((radio=='CDV')?splitAndReturnObjectCDV(a):splitAndReturnObjectEP(a));
+    objA = (json.g != undefined)?json.g:((radio=='CDV')?splitAndReturnObjectCDV(a):splitAndReturnObjectEP(a));
 	objB = (radio=='CDV')?splitAndReturnObjectCDV(b):splitAndReturnObjectEP(b);
 	compare(objA,objB);
 	html = buildHtml();
