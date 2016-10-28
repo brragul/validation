@@ -9,6 +9,7 @@ $("document").ready(function(){
 	$("body").on('click','.dropdown ul li',function(e){
 		 t = e.target.childNodes["0"].data;
 		 tc = myjson[t];
+		 json.s = tc;
 		$(".dropdown-toggle").html(t);
 	});
 	

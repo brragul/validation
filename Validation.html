@@ -5,6 +5,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/compare.js"></script>
+	<script src="js/xmlManipulate.js"></script>
 </head>
   <body>
       <div class="container">
@@ -26,6 +27,11 @@
       </div>
 	<br>
     <button id="compare" value="Submit">Compare</button>
+	<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><span class="caret"></span>Select a module</button>
+			<ul class="dropdown-menu">
+			</ul>
+		  </div>
     <label><input type="radio" name="variable" value="CDV" checked>Context Data Variable</label>
     <label><input type="radio" name="variable" value="ep">eVar/prop</label>
 	<br><br>

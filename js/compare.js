@@ -2,13 +2,23 @@ var equal = '',
 	missing = '',
 	mismatch = '',
 	html = '';
+	
+var json = {
+	r : undefined,
+	get g(){
+		return r;
+	},
+	set s(x){
+		this.r =x;
+	}
+};
 $('document').ready(function(){
   $('body').on('click','#compare',function(){
 	$('#myTable').empty();
     var radio =  $('input[name=variable]:checked').val();
 	var a = $('#txtArea1').val(),
 	b = $('#txtArea2').val(),
-    objA = (radio=='CDV')?splitAndReturnObjectCDV(a):splitAndReturnObjectEP(a);
+    objA = (json.g == undefined)?(objA = splitAndReturnObjectCDV(json.g)):((radio=='CDV')?splitAndReturnObjectCDV(a):splitAndReturnObjectEP(a));
 	objB = (radio=='CDV')?splitAndReturnObjectCDV(b):splitAndReturnObjectEP(b);
 	compare(objA,objB);
 	html = buildHtml();
