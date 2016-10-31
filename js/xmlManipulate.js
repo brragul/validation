@@ -1,11 +1,12 @@
 $("document").ready(function(){
-	var myjson,t,tc,newobj,jsontotext,
+	var myjson,t,tc,newobj,jsontotext,appnd={};
 	clear = function(){
 		$('#txtArea1').remove();
 		$('#checkReq').remove();
 		$('#reqName').remove();
 		$('#myTable').remove();
 		$('#createLink').remove();
+		$('#addQueue').remove();
 	};
 	$.getJSON("data/video.json", function(json) {
 			myjson = json;
@@ -42,12 +43,14 @@ $("document").ready(function(){
 		
 		$('#checkReq').remove();
 		$('#insertTextArea').append('<button id="createLink">Done Create Link</button>');
+		$('#insertTextArea').append('<button id="addQueue">Add to Queue</button>');
+	});
+	$('#insertTextArea').on('click','#addQueue',function(){
+		var nm = $('#reqName').val();
+		appnd[nm] =  newobj
+		myjson= $.extend(myjson,appnd);
 	});
 	$('#insertTextArea').on('click','#createLink',function(){
-		var nm = $('#reqName').val();
-		var o={};
-		o[nm] =  newobj
-		myjson= $.extend(myjson,o);
 		jsontotext = JSON.stringify(myjson);
 		$('#downloadlink').attr('style','display: block');
 		var link = document.getElementById('downloadlink');
