@@ -1,0 +1,10 @@
+#!/bin/sh
+
+SERVICE='Google Chrome'
+
+if pgrep -xq -- "${SERVICE}"; then
+   printf "\n\nPlease quit the chrome browser and retry again\n\n\n"
+else
+    open -a "Google Chrome" --args --allow-file-access-from-files
+fi
+
