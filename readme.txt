@@ -1,5 +1,5 @@
 Mac:
-	quit windows
+	quit Chrome
 	Open launch 
 Windows
 	Open comman prompt
