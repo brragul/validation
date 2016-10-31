@@ -15,10 +15,10 @@ var json = {
 $('document').ready(function(){
   $('body').on('click','#compare',function(){
 	$('#myTable').empty();
-    var radio =  $('input[name=variable]:checked').val();
+    	var radio =  $('input[name=variable]:checked').val();
 	var a = $('#txtArea1').val(),
 	b = $('#txtArea2').val(),
-    objA = (json.g != undefined)?json.g:((radio=='CDV')?splitAndReturnObjectCDV(a):splitAndReturnObjectEP(a));
+    	objA = (json.g != undefined)?json.g:((radio=='CDV')?splitAndReturnObjectCDV(a):splitAndReturnObjectEP(a));
 	objB = (radio=='CDV')?splitAndReturnObjectCDV(b):splitAndReturnObjectEP(b);
 	compare(objA,objB);
 	html = buildHtml();
@@ -30,8 +30,8 @@ $('document').ready(function(){
 
 function compare(x,y){
 	for(var key in x){
-		var xV = x[key];
-		var yV = y[key];
+		var xV = (x[key])?x[key].trim():x[key];
+		var yV = (y[key])?y[key].trim():y[key];
         if(xV){
             xV = xV.replace('<','&lt;');
             xV = xV.replace('>','&gt;');
