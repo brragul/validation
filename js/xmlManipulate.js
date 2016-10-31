@@ -49,6 +49,7 @@ $("document").ready(function(){
 		var nm = $('#reqName').val();
 		appnd[nm] =  newobj
 		myjson= $.extend(myjson,appnd);
+		$('#AppendedModules #tblAppnd').append('<tr><th>'+nm+'</th></tr>');
 	});
 	$('#insertTextArea').on('click','#createLink',function(){
 		jsontotext = JSON.stringify(myjson);
