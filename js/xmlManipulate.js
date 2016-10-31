@@ -22,12 +22,12 @@ $("document").ready(function(){
 	});
 	
 	$("#getJSON").click(function(){
-		$("#myTable").html(displayReq(tc));
+		$("#myTable").html(displayReq(tc,t));
 	});
 	$('#insertNewReq').click(function(){
 		clear();
-		$('#insertTextArea').append('<input id="reqName" type="text" placeholder="Type Requirement Name"></input><br>');
-		$('#insertTextArea').append('<textarea rows="20" cols="60" id="txtArea1"></textarea>');
+		$('#insertTextArea').append('<br><input id="reqName" type="text" placeholder="Type Requirement Name"></input><br><br>');
+		$('#insertTextArea').append('<textarea rows="20" cols="60" id="txtArea1" placeholder="Copy paste from requirements here"></textarea>');
 		$('#insertTextArea').append('<button id="checkReq">Review Requirement</button>');
 	});
 	
@@ -37,19 +37,22 @@ $("document").ready(function(){
 		$('body').append('<p id="myTable"></p>');
 		var txt = $('#txtArea1').val();
 		newobj = splitAndReturnObjectCDV(txt);
-		$("#myTable").html(displayReq(newobj));
 		var nm = $('#reqName').val();
-		var o={};
-		o[nm] =  newobj
-		myjson= $.extend(myjson,o);
+		$("#myTable").html(displayReq(newobj,nm));
+		
 		$('#checkReq').remove();
 		$('#insertTextArea').append('<button id="createLink">Done Create Link</button>');
 	});
 	$('#insertTextArea').on('click','#createLink',function(){
+		var nm = $('#reqName').val();
+		var o={};
+		o[nm] =  newobj
+		myjson= $.extend(myjson,o);
 		jsontotext = JSON.stringify(myjson);
 		$('#downloadlink').attr('style','display: block');
 		var link = document.getElementById('downloadlink');
 		link.href = makeTextFile(jsontotext);
+		alert('Requirement added!');
 		
 	});
 	
@@ -69,8 +72,8 @@ $("document").ready(function(){
 });
 
 
-function displayReq(o){
-	var header = '<tr><th>Variable</th><th>Expected Values</th></tr>',col;
+function displayReq(o,nm){
+	var header = '<tr><th>Variable</th><th>Expected Values</th></tr>',col='<tr>Requirement Name: '+nm+'</tr>';
 	for(var obj in o)
 	{
 		if(o[obj].indexOf(">")>-1||o[obj].indexOf("<")>-1){
