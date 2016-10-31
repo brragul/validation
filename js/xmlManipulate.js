@@ -1,5 +1,12 @@
 $("document").ready(function(){
-	var myjson,t,tc;
+	var myjson,t,tc,newobj,jsontotext,
+	clear = function(){
+		$('#txtArea1').remove();
+		$('#checkReq').remove();
+		$('#reqName').remove();
+		$('#myTable').remove();
+		$('#createLink').remove();
+	};
 	$.getJSON("data/video.json", function(json) {
 			myjson = json;
 			$.each(json,function(k,v){
@@ -7,6 +14,7 @@ $("document").ready(function(){
 			});
 		});
 	$("body").on('click','.dropdown ul li',function(e){
+		
 		 t = e.target.childNodes["0"].data;
 		 tc = myjson[t];
 		 json.s = tc;
@@ -16,6 +24,48 @@ $("document").ready(function(){
 	$("#getJSON").click(function(){
 		$("#myTable").html(displayReq(tc));
 	});
+	$('#insertNewReq').click(function(){
+		clear();
+		$('#insertTextArea').append('<input id="reqName" type="text" placeholder="Type Requirement Name"></input><br>');
+		$('#insertTextArea').append('<textarea rows="20" cols="60" id="txtArea1"></textarea>');
+		$('#insertTextArea').append('<button id="checkReq">Review Requirement</button>');
+	});
+	
+	
+	
+	$('#insertTextArea').on('click','#checkReq',function(){
+		$('body').append('<p id="myTable"></p>');
+		var txt = $('#txtArea1').val();
+		newobj = splitAndReturnObjectCDV(txt);
+		$("#myTable").html(displayReq(newobj));
+		var nm = $('#reqName').val();
+		var o={};
+		o[nm] =  newobj
+		myjson= $.extend(myjson,o);
+		$('#checkReq').remove();
+		$('#insertTextArea').append('<button id="createLink">Done Create Link</button>');
+	});
+	$('#insertTextArea').on('click','#createLink',function(){
+		jsontotext = JSON.stringify(myjson);
+		$('#downloadlink').attr('style','display: block');
+		var link = document.getElementById('downloadlink');
+		link.href = makeTextFile(jsontotext);
+		
+	});
+	
+	var textFile = null,
+	makeTextFile = function (text) {
+    var data = new Blob([text], {type: 'text/plain'});
+    if (textFile !== null) {
+      window.URL.revokeObjectURL(textFile);
+    }
+    textFile = window.URL.createObjectURL(data);
+    return textFile;
+  };
+	//$('body').on('click','#downloadlink',function(){
+		
+	//});
+	
 });
 
 
