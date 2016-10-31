@@ -1,3 +1,13 @@
+Mac:
+	quit windows
+	Open launch 
+Windows
+	Open comman prompt
+	Enter the following command "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --allow-file-access-from-files
+	Enter the correct location in the above command if the same fails
+	
+The reason is we need to give explicit command for chrome to access local files. Otherwise this application wont work. We cannot access the JSON file where all data is saved.
+	
 Do not change any Javascript files. Thanks
 
 Before comparing do the following in excel
